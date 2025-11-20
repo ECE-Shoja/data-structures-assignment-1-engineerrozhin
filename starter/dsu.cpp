@@ -12,7 +12,7 @@ int findSet(int v) {
 
 void unionSet(int a, int b) {
     // TODO: implement union by size/rank
-    int rootA=findSet(a);
+    int rootA=findSet(a); 
     int rootB=findSet(b);
     if(rootA==rootB) return;
     if(sz[rootA]<sz[rootB]){
