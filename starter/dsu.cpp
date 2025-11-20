@@ -14,7 +14,14 @@ void unionSet(int a, int b) {
     // TODO: implement union by size/rank
     int rootA=findSet(a);
     int rootB=findSet(b);
-    parent[rootA]=rootB;
+    if(rootA==rootB) return;
+    if(sz[rootA]<sz[rootB]){
+        parent[rootA]=rootB;
+        sz[rootB]+=sz[rootA];
+}else{
+        parent[rootB]=rootA;
+        sz[rootA]+=sz[rootB];
+    }
 }
 
 int main() {
