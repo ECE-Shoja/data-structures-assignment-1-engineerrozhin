@@ -9,7 +9,6 @@ int findSet(int v) {
         v=parent[v];
     return v;
 }
-
 void unionSet(int a, int b) {
     // TODO: implement union by size/rank
     int rootA=findSet(a);
