@@ -5,10 +5,16 @@ vector<int> parent, sz;
 
 int findSet(int v) {
     // TODO: implement path compression
+    while(v!=parent[v])
+        v=parent[v];
+    return v;
 }
 
 void unionSet(int a, int b) {
     // TODO: implement union by size/rank
+    int rootA=findSet(a);
+    int rootB=findSet(b);
+    parent[rootA]=rootB;
 }
 
 int main() {
